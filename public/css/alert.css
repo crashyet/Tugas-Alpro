@@ -1,0 +1,71 @@
+/* Styling Alert */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.alert.show {
+    animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateY(-150%);
+    }
+}
+
+.alert.hide {
+    /* display: none; */
+    animation: hide_slide 1.5s ease forwards;
+}
+
+@keyframes hide_slide {
+    100% {
+        transform: translateY(-150%)
+    }
+}
+
+.alert.none {
+    display: none;
+}
+
+.alert {
+    display: flex;
+    position: absolute;
+    min-width: 420px;
+    height: 50px;
+    background: #ff9b9b;
+    padding: 20px 40px;
+    top: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-left: 12px solid #ff0202;
+}
+
+.alert .ph-warning-circle {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ce0000;
+    font-size: 30px;
+}
+
+.alert .msg {
+    padding: 0 20px;
+    font-size: 15px;
+    color: #ce0000;
+}
+

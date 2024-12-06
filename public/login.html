@@ -1,0 +1,93 @@
+<!-- Untuk Login -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <!-- STYLE -->
+        <link rel="stylesheet" href="/public/css/login.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!-- Alertt -->
+        <link rel="stylesheet" href="/public/css/alert.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="form-col">
+                <div class="btn-box">
+                    <button class="btn btn-1" id="login">Sign In</button>
+                    <button class="btn btn-2" id="register">Sign Up</button>
+                </div>
+
+                <!-- login form container -->
+                <form id="signInForm" class="form-box login-form" method="POST" action="/app/access-login.php">
+                    <div class="form-title">
+                        <span>Sign In</span>
+                    </div>
+                    <div class="form-inputs">
+                        <div class="input-box">
+                            <input type="text" name="logUser" class="inputs input-field" placeholder="Username" required>
+                            <ion-icon name="person-outline" class="icon"></ion-icon>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="logPass" oninput="changeIcon(this.value)" id="logPassword" class="inputs input-field" placeholder="Password" required>
+                            <ion-icon name="lock-closed-outline" class="icon" id="log-pass-icon" onclick="myLogPassword()"></ion-icon>
+                        </div>
+                        <div class="input-box">
+                            <button class="inputs submit-btn">
+                                <span>Sign In</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- register -->
+                <form id="signUpForm" class="form-box register-form" action="/app/access-register.php" method="POST">
+                    <div class="form-title">
+                        <span>Sign Up</span>
+                    </div>
+                    <div class="form-inputs">
+                        <div class="input-box">
+                            <input type="text" name="regUser" class="inputs input-field" placeholder="Username" required>
+                            <ion-icon name="person-outline" class="icon"></ion-icon>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="regPass" oninput="changeIcon(this.value)" id="regPassword" class="inputs input-field" placeholder="Password" required>
+                            <ion-icon name="lock-closed-outline" class="icon" id="reg-pass-icon" onclick="myRegPassword()"></ion-icon>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="regPassRepeat" oninput="changeIcon(this.value)" id="regPasswordRepeat" class="inputs input-field" placeholder="Repeat Password" required>
+                            <ion-icon name="lock-closed-outline" class="icon" id="reg-pass-icon-repeat" onclick="myRegPasswordRepeat()"></ion-icon>
+                        </div>
+                        <div class="input-box">
+                            <button class="inputs submit-btn">
+                                <span>Sign Up</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Tampilan alert jika login gagal -->
+        <div class="alert none">
+            <span class="ph ph-warning-circle"></span>
+            <small class="msg"></small>
+            <span class="close-btn">
+                <a class="ph ph-x-circle"></a>
+            </span>
+        </div>
+
+        <script src="/public/js/alert.js"></script>          <!-- Script Alert -->
+        <script src="/public/js/slider-login.js"></script>   <!-- Script Slide -->
+        <!-- <script src="main.js"></script> -->
+    </body>
+</html>

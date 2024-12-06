@@ -1,0 +1,31 @@
+<!-- Untuk Tampilan Input Data -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Input</title>
+        <link rel="stylesheet" href="/public/css/data-input.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="form-header">
+                <span>+ Tambah Data Barang</span>
+                <a href="/public/dashboard.php" class="ph ph-x icon-x"></a>
+            </div>
+        
+            <form action="/app/input-data.php" method="post" class="form-body">
+                <label>Nama Barang</label>
+                <input type="text" name="nama_barang" placeholder="Masukan Nama Barang" required><br><br>
+                <label>Harga Barang</label>
+                <input type="number" name="harga_barang" placeholder="Masukan Harga Barang" required><br><br>
+                <label>Stok Barang</label>
+                <input type="number" name="stok_barang" placeholder="Masukan Jumlah Stock Barang" required><br><br>
+
+                <input type="submit" value="Submit" class="btn-simpan">
+            </form>
+        </div>
+    </body>
+</html>

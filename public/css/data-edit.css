@@ -1,0 +1,97 @@
+/* Style Edit Form */
+
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url('https://products.ls.graphics/mesh-gradients/images/03.-Snowy-Mint_1.jpg');
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.form-container {
+    width: 300px;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+  
+.form-header {
+    display: flex;
+    background-color: #2c6675;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+  
+.form-body {
+    padding: 16px;
+}
+  
+.form-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+ }
+  
+.form-body input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    justify-items: center;
+}
+  
+.btn-simpan {
+    background-color: #2c6675;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+  
+.btn-simpan:hover {
+    background-color: #24555f;
+}
+
+.icon-x {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.icon-x:hover {
+    color: red;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Untuk Firefox */
+}
